@@ -1,0 +1,494 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flexCenter ($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+body {
+  overflow-x: hidden;
+}
+#main {
+  width: 100vw;
+  background-color: #2D2D2D;
+  overflow: hidden;
+  position: relative;
+  z-index: 101;
+  background-attachment: fixed;
+
+  &>div:nth-child(1) {
+    height: 100vh;
+    @include flexCenter(center, center);
+
+    // &>h1 {
+    //   letter-spacing: 4px;
+    //   transform: scale(6, 11);
+    //   color: #BA3737;
+    // }
+  }
+
+
+  // nav {
+  //   width: 100vw;
+  //   height: 10vh;
+  //   @include flexCenter(space-around, center);
+  //   background-color: #2D2D2D;
+  //   position: fixed;
+  //   top: 0;
+  //   z-index: 100;
+
+  //   &>ul {
+  //     width: 100vw;
+  //     height: 10vh;
+  //     background-color: #373737;
+  //     @include flexCenter(space-around, center);
+  //     list-style-type: none;
+
+  //     &>li {
+  //       // width: 33vw;
+  //       // height: 15vh;
+  //       @include flexCenter(center, center);
+
+  //       color: #fff;
+  //       font-size: 1.5rem;
+  //       font-weight: 800;
+  //       letter-spacing: 5px;
+  //       transform: scale(2, 3);
+  //     }
+  //   }
+  // }
+}
+#titleText {
+  opacity: 1;
+}
+.fade {
+  opacity: 1;
+  
+  transition: 0.7s ease;
+  transform: translateX(50px);
+  color: #BA3737;
+  // position: relative;
+  z-index: 120;
+  
+}
+#background {
+  width: 100vw;
+  background-color: #2D2D2D;
+  position: relative;
+  z-index: 101;
+
+  #pilgrimage_main {
+    width: 100vw;
+    height: 100vh;
+    // background-color: #ccc;
+    z-index: 100;
+
+  }
+
+  #actorTextBox {
+    width: 20vw;
+    height: 80vh;
+    position: absolute;
+    top: 100vh;
+    left: 5vw;
+    @include flexCenter(space-around, center);
+    flex-direction: column;
+    opacity: 0;
+
+
+    &>div:nth-child(1) {
+      width: 20vw;
+      height: 5vh;
+      @include flexCenter(center, center);
+
+      &>span {
+        color: #BA3737;
+        transform: scale(6, 10);
+        font-weight: 1000;
+
+      }
+    }
+
+    &>div:nth-child(2) {
+      width: 20vw;
+      height: 45vh;
+      @include flexCenter(space-around, center);
+      flex-direction: column;
+
+      // opacity: 0;
+      &>span {
+        height: 5vh;
+        transform: scale(2, 4);
+        letter-spacing: 2px;
+        color: #fff;
+        font-weight: 700;
+        // opacity: 0;
+
+      }
+    }
+
+  }
+
+  #pilgrimage_pageTwo {
+    width: 100vw;
+    // height: 100vh;
+    @include flexCenter(flex-end, center);
+
+    &>div:nth-child(1) {
+      width: 70vw;
+      height: 150vh;
+
+      @include flexCenter(flex-end, center);
+      flex-direction: column;
+
+      &>div:nth-child(1) {
+        opacity: 0;
+      }
+
+      &>div:nth-child(2) {
+        width: 67vw;
+        height: 40vh;
+        @include flexCenter(flex-start, center);
+        opacity: 0;
+
+        // border: 1px solid red;
+
+        &>div:nth-child(1){
+          width: 44vw;
+          color: #fff;
+          font-size: 12px;
+          line-height: 40px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  #indiText {
+    // width: 90vw;
+    font-size: 12rem;
+    color: #2D2D2D;
+    font-weight: 1000;
+    // transform: scale(12,25);
+    opacity: 0;
+  }
+
+  .indiTextFade {
+    opacity: 1;
+    transition: 0.7s ease;
+    transform: translateX(50px);
+    color: #f3f3f3;
+  }
+  
+  #newsContainer {
+    width: 100vw;
+    // height: 200vh;
+    z-index: 1;
+    position: relative;
+    // border: 1px solid #fff;
+    @include flexCenter(space-around, center);
+    flex-direction: column;
+
+&>div:nth-child(1){
+  width: 100vw;
+  height: 105vh;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+
+  #newsText {
+    width: 100vw;
+    height: 35vh;
+    z-index: 1;
+    position: relative;
+    @include flexCenter(flex-start, center);
+
+    &>span {
+      margin-left: 15vw;
+      transform: scale(12.5, 25);
+      color: #BA3737;
+      font-weight: 1000;
+    }
+  }
+
+  &>div:nth-child(2) {
+    width: 100vw;
+    height: 70vh;
+    // border: 1px solid red;
+    @include flexCenter(space-around, center);
+    flex-direction: column;
+
+    &>div {
+      width: 90vw;
+      height: 15vh;
+      background-color: #595959;
+      border: 1px solid #fff;
+
+      color: #fff;
+      font-size: 2rem;
+      @include flexCenter(flex-start, center);
+      font-weight: 700;
+
+      &>p {
+        margin-left: 2vw;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+    &>div:nth-child(2) {
+      width: 100vw;
+      height: 120vh;
+      background-color: #2D2D2D;
+      border: none;
+      @include flexCenter(flex-start, center);
+      opacity: 0;
+
+      &>div:nth-child(1) {
+        width: 50vw;
+        height: 90vh;
+        // border: 1px solid yellow;
+        @include flexCenter(flex-start, center);
+        flex-direction: column;
+        // border: 1px solid yellow;
+
+        &>div:nth-child(1) {
+          width: 37vw;
+          // border: 1px solid yellow;
+        }
+
+        &>div:nth-child(2) {
+          width: 35vw;
+          height: 35vh;
+          // border: 1px solid yellow;
+          @include flexCenter(center, center);
+
+          &>div:nth-child(1) {
+            width: 35vw;
+            font-size: 0.8rem;
+            font-weight: 500;
+            @include flexCenter(center, flex-end);
+            line-height: 25px;
+            text-align: justify;
+            color: #fff;
+
+          }
+        }
+
+        &>div:nth-child(1) {
+          width: 40vw;
+          height: 80vh;
+          // border: 1px solid blue;
+          @include flexCenter(space-around, center);
+        }
+      }
+
+      &>div:nth-child(2) {
+        width: 47vw;
+        height: 90vh;
+        @include flexCenter(flex-start, center);
+        // border: 1px solid red;
+        flex-direction: column;
+
+        &>div:nth-child(2) {
+          width: 47vw;
+          height: 30vh;
+          // background-color: #BA3737;
+          @include flexCenter(center, center);
+
+          &>div:nth-child(1) {
+            width: 47vw;
+            height: 10vh;
+            font-size: 0.8rem;
+            color: #fff;
+
+            font-weight: 200;
+            line-height: 25px;
+            text-align: justify;
+            @include flexCenter(center, center);
+            // border: 1px solid red;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  
+  #pilgrimage_rising {
+    width: 100vw;
+    // height: 80vh;
+    @include flexCenter(flex-end, center);
+    flex-direction: column;
+    // opacity: 0;
+
+    &>div:nth-child(1){
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+
+      &>div:nth-child(1) {
+        width: 100vw;
+        height: 30vh;
+        // position: absolute;
+        z-index: 10;
+        // left: 56vw;
+        // top: 422vh;
+        font-size: 10rem;
+        color: #BA3737;
+        font-weight: 800;
+        @include flexCenter(flex-start, center);
+    
+        &>div:nth-child(1) {
+          width: 37vw;
+          height: 20vh;
+          @include flexCenter(center, center);
+          // border: 1px solid red;
+        }
+      }
+      &>div:nth-child(2) {
+        width: 90vw;
+        // height: 80vh;
+        @include flexCenter(space-around, center);
+        // opacity: 0;
+  
+        &>div {
+          @include flexCenter(center, center);
+          flex-direction: column;
+  
+          &>p {
+            height: 7vh;
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+
+
+    #risingSectionTwo {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      overflow-x: hidden;
+      // opacity: 0;
+
+      &>div:nth-child(1) {
+        width: 50vw;
+        @include flexCenter(center, center);
+
+        &>div:nth-child(1) {
+          width: 40vw;
+          height: 90vh;
+          // border: 1px solid red;
+          @include flexCenter(center, center);
+          flex-direction: column;
+          position: relative;
+          overflow-x: hidden;
+
+          &>div:nth-child(1) {
+            width: 120vw;
+            height: 50vh;
+            @include flexCenter(space-around, center);
+            position: absolute;
+
+            &>div {
+              width: 40vw;
+              height: 50vh;
+              top: 0;
+              left: 38vw;
+            }
+          }
+
+          &>div:nth-child(2) {
+            width: 60vw;
+            height: 80vh;
+            // border: 1px solid #fff;
+            @include flexCenter(flex-end, flex-end);
+
+            &>div:nth-child(1) {
+              width: 25vw;
+              height: 8vh;
+              // border: 1px solid #fff;
+              @include flexCenter(center, center);
+              flex-direction: column;
+
+              &>div {
+                cursor: default;
+                width: 5vw;
+                height: 3vh;
+                color: #fff;
+                font-weight: 600;
+                font-size: 1.2rem;
+              }
+
+              &>div:nth-child(1) {
+                @include flexCenter(flex-end, center);
+              }
+
+              &>div:nth-child(2) {
+                @include flexCenter(flex-start, center);
+              }
+            }
+          }
+        }
+      }
+
+      &>div:nth-child(2) {
+        width: 50vw;
+        height: 63vh;
+        // border: 1px solid red;
+        @include flexCenter(flex-end, flex-start);
+        flex-direction: column;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 200;
+        line-height: 25px;
+        text-align: justify;
+
+        &>div:nth-child(1){
+          width: 35vw;
+          height: 10vh;
+          // border: 1px solid #fff;
+          font-size: 2rem;
+          font-weight: 600;
+          letter-spacing: 3px;
+        @include flexCenter(flex-start, flex-start);
+        }
+
+        &>div:nth-child(2) {
+          width: 35vw;
+          height: 28vh;
+          font-size: 12px;
+          line-height: 35px;
+          // border: 1px solid #fff;
+          @include flexCenter(flex-start, flex-end);
+
+        }
+      }
+    }
+  }
+
+  .totheTop{
+    width: 10vw;
+    height: 5vw;
+    // border: 1px solid red;
+    @include flexCenter(center, center);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    position: fixed;
+    right: 3vw;
+    bottom: 2vw;
+    display: flex;
+    justify-content: space-around;
+  }
+}

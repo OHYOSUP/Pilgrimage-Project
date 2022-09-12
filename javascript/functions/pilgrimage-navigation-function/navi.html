@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+
+  <script>
+    const root = document.getElementById('root');
+
+    root.style.width = '100vw';
+    root.style.height = '350vh';
+    root.style.backgroundColor = '#ccc'
+
+    root.innerHTML =  `
+
+    <ul>
+      <a href = '#sectionOne'>
+        <li>ACTOR</li>
+      </a>
+      <a href = '#sectionTwo'>
+      <li>NEWS</li>
+    </a>
+      <a href = '#sectionThree'>
+      <li>RISING</li>
+    </a>
+
+    </ul>
+
+    <div>
+      <span></span>
+    </div>
+    <div></div>
+    <div></div>
+`
+    const ul = document.querySelector('ul');
+    const li = document.querySelectorAll('li');
+    ul.style.width = '100vw';
+    ul.style.height = '10vh';
+    ul.style.backgroundColor = '#222';
+    ul.style.display = 'flex'
+    ul.style.position = 'fixed'
+
+    const item = Array.from(li);
+    // console.log(Array.isArray(item));
+    
+    
+    item.forEach(function(elem){
+      elem.style.color = '#fff';
+      elem.style.width = '30vw';
+      elem.style.height = '10vh';
+      elem.style.display = 'flex';
+      elem.style.justifyContent = 'center';
+      elem.style.alignItems = 'center';
+    });
+
+
+
+    const div = document.querySelectorAll('div');
+    // console.log(div);
+    div[1].id = 'sectionOne';
+    div[2].id = 'sectionTwo';
+    div[3].id = 'sectionThree';
+
+    div[1].style.width = '100vw';
+    div[1].style.height = '100vh';
+    div[1].style.backgroundColor = 'salmon';
+    
+    div[2].style.width = '100vw';
+    div[2].style.height = '100vh';
+    div[2].style.backgroundColor = '#666';
+
+    div[3].style.width = '100vw';
+    div[3].style.height = '100vh';
+    div[3].style.backgroundColor = '#lightblue';
+
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      }); 
+  });
+});
+const sectionOne = document.getElementById('sectionOne');
+const sectionTwo = document.getElementById('sectionTwo');
+const sectionThree = document.getElementById('sectionThree');
+
+// console.log(sectionOne);
+
+sectionTwo.style.display = 'flex';
+sectionTwo.style.justifyContent ='center';
+sectionTwo.style.alignItems ='center';
+sectionThree.style.display = 'flex';
+sectionThree.style.justifyContent ='center';
+sectionThree.style.alignItems ='center';
+
+const span = document.querySelector('span');
+
+span.style.fontSize = '3rem';
+span.style.position = 'fixed';
+span.style.top = '20vh';
+
+// ----------------------스크롤에 따른 엘리먼트 생성---------------------------------------------------------------
+
+// let posY = window.pageYOffset;
+
+// const screenOne = document.createElement('div');
+
+
+// screenOne.style.width = '20vw';
+// screenOne.style.height = '20vh';
+// screenOne.style.backgroundColor = 'black';
+// screenOne.style.transition = '1s';
+
+
+
+
+
+// window.addEventListener('wheel', (e)=>{
+// console.log(e);
+
+//   span.textContent = window.pageYOffset;
+// if(posY <= 0){
+//   posY = 0
+// }
+// if(posY >= 2400){
+//   posY = 2400
+// }
+//   // if(e.deltaY > 0 && posY >= 500){
+//   //   sectionTwo.appendChild(screenOne);
+//   // }
+// })
+
+
+
+// window.addEventListener('wheel', ()=>{
+//   if(e.deltaY > 0 && window.pageYOffset >= 500){
+//     sectionTwo.appendChild(screenOne);
+//   }
+// })
+
+
+  </script>
+</body>
+</html>

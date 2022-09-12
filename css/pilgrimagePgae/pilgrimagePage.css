@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#main {
+  width: 100vw;
+  background-color: #2D2D2D;
+  overflow: hidden;
+  position: relative;
+  z-index: 101;
+  background-attachment: fixed;
+}
+#main > div:nth-child(1) {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#titleText {
+  opacity: 1;
+}
+
+.fade {
+  opacity: 1;
+  transition: 0.7s ease;
+  transform: translateX(50px);
+  color: #BA3737;
+  z-index: 120;
+}
+
+#background {
+  width: 100vw;
+  background-color: #2D2D2D;
+  position: relative;
+  z-index: 101;
+}
+#background #pilgrimage_main {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+#background #actorTextBox {
+  width: 20vw;
+  height: 80vh;
+  position: absolute;
+  top: 100vh;
+  left: 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+}
+#background #actorTextBox > div:nth-child(1) {
+  width: 20vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#background #actorTextBox > div:nth-child(1) > span {
+  color: #BA3737;
+  transform: scale(6, 10);
+  font-weight: 1000;
+}
+#background #actorTextBox > div:nth-child(2) {
+  width: 20vw;
+  height: 45vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#background #actorTextBox > div:nth-child(2) > span {
+  height: 5vh;
+  transform: scale(2, 4);
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 700;
+}
+#background #pilgrimage_pageTwo {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#background #pilgrimage_pageTwo > div:nth-child(1) {
+  width: 70vw;
+  height: 150vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+#background #pilgrimage_pageTwo > div:nth-child(1) > div:nth-child(1) {
+  opacity: 0;
+}
+#background #pilgrimage_pageTwo > div:nth-child(1) > div:nth-child(2) {
+  width: 67vw;
+  height: 40vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0;
+}
+#background #pilgrimage_pageTwo > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  width: 44vw;
+  color: #fff;
+  font-size: 12px;
+  line-height: 40px;
+  text-align: justify;
+}
+#background #indiText {
+  font-size: 12rem;
+  color: #2D2D2D;
+  font-weight: 1000;
+  opacity: 0;
+}
+#background .indiTextFade {
+  opacity: 1;
+  transition: 0.7s ease;
+  transform: translateX(50px);
+  color: #f3f3f3;
+}
+#background #newsContainer {
+  width: 100vw;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#background #newsContainer > div:nth-child(1) {
+  width: 100vw;
+  height: 105vh;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+#background #newsContainer > div:nth-child(1) #newsText {
+  width: 100vw;
+  height: 35vh;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#background #newsContainer > div:nth-child(1) #newsText > span {
+  margin-left: 15vw;
+  transform: scale(12.5, 25);
+  color: #BA3737;
+  font-weight: 1000;
+}
+#background #newsContainer > div:nth-child(1) > div:nth-child(2) {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#background #newsContainer > div:nth-child(1) > div:nth-child(2) > div {
+  width: 90vw;
+  height: 15vh;
+  background-color: #595959;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 700;
+}
+#background #newsContainer > div:nth-child(1) > div:nth-child(2) > div > p {
+  margin-left: 2vw;
+  letter-spacing: 2px;
+}
+#background #newsContainer > div:nth-child(2) {
+  width: 100vw;
+  height: 120vh;
+  background-color: #2D2D2D;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(1) {
+  width: 50vw;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  width: 37vw;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+  width: 35vw;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  width: 35vw;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  line-height: 25px;
+  text-align: justify;
+  color: #fff;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  width: 40vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(2) {
+  width: 47vw;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+  width: 47vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#background #newsContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  width: 47vw;
+  height: 10vh;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 200;
+  line-height: 25px;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#background #pilgrimage_rising {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+#background #pilgrimage_rising > div:nth-child(1) {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+#background #pilgrimage_rising > div:nth-child(1) > div:nth-child(1) {
+  width: 100vw;
+  height: 30vh;
+  z-index: 10;
+  font-size: 10rem;
+  color: #BA3737;
+  font-weight: 800;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#background #pilgrimage_rising > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+  width: 37vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#background #pilgrimage_rising > div:nth-child(1) > div:nth-child(2) {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#background #pilgrimage_rising > div:nth-child(1) > div:nth-child(2) > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#background #pilgrimage_rising > div:nth-child(1) > div:nth-child(2) > div > p {
+  height: 7vh;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+#background #pilgrimage_rising #risingSectionTwo {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) {
+  width: 40vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+  width: 120vw;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div {
+  width: 40vw;
+  height: 50vh;
+  top: 0;
+  left: 38vw;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  width: 25vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div {
+  cursor: default;
+  width: 5vw;
+  height: 3vh;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(2) {
+  width: 50vw;
+  height: 63vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 200;
+  line-height: 25px;
+  text-align: justify;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(2) > div:nth-child(1) {
+  width: 35vw;
+  height: 10vh;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#background #pilgrimage_rising #risingSectionTwo > div:nth-child(2) > div:nth-child(2) {
+  width: 35vw;
+  height: 28vh;
+  font-size: 12px;
+  line-height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#background .totheTop {
+  width: 10vw;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  position: fixed;
+  right: 3vw;
+  bottom: 2vw;
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=pilgrimagePage.css.map */

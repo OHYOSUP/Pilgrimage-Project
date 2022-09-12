@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root{
+      width: 100vw;
+      height: 100vh;
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 5rem;
+    }
+
+    h1{
+      color: silver;
+      position: relative;
+      white-space: nowrap;
+
+    }
+
+    h1:before{
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #3498db;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transition : 0.2s ease-in;
+    }
+
+    h1:hover:before{
+      width: 100%;
+
+    }
+
+  </style>
+
+</head>
+<body>
+  <div id="root">
+    <h1 data-text="INDIPENDENT FILM">INDIPENDENT FILM</h1>
+  </div>
+
+  <script>
+
+
+
+  </script>
+</body>
+</html>
